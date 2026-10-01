@@ -14,16 +14,19 @@
     <!-- ساخت دکمه برای نشان دادن لیست -->
     <section>
       <div class="inputs">
-
-        <input type="text" placeholder="نام">
-        <br>
-        <input type="text" placeholder="ایمیل">
+        <input type="text" id="name" placeholder="نام" />
+        <br />
+        <input type="text" id="email" placeholder="ایمیل" />
+        <br />
+        <input type="text" id="phone" placeholder="شماره تماس" />
       </div>
       <div class="addDiv">
         <button onclick="addusers()" class="addBtn">افزودن کاربر</button>
       </div>
       <div class="showDiv">
-        <button onclick="showusers()" class="showBtn">نمایش اطلاعات کاربران</button>
+        <button onclick="showusers()" class="showBtn">
+          نمایش اطلاعات کاربران
+        </button>
       </div>
     </section>
 
@@ -32,7 +35,6 @@
       <table class="usersTable" id="usersTable">
         <thead>
           <tr class="tableTr">
-
             <th>آیدی</th>
             <th>نام</th>
             <th>تلفن</th>
