@@ -1,16 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body dir="rtl">
+    <!-- ساخت سر تیتر -->
+    <header class="header">
+      <h1 class="headline">لیست کاربران</h1>
+    </header>
+    <!-- ساخت دکمه برای نشان دادن لیست -->
+    <section>
+      <div class="inputs">
 
+        <input type="text" placeholder="نام">
+        <br>
+        <input type="text" placeholder="ایمیل">
+      </div>
+      <div class="addDiv">
+        <button onclick="addusers()" class="addBtn">افزودن کاربر</button>
+      </div>
+      <div class="showDiv">
+        <button onclick="showusers()" class="showBtn">نمایش اطلاعات کاربران</button>
+      </div>
+    </section>
 
+    <!-- مکان نشان دادن اطلاعات -->
+    <div class="infoplace">
+      <table class="usersTable">
+        <thead>
+          <tr class="tableTr">
+            <th>نام</th>
+            <th>تلفن</th>
+            <th>ایمیل</th>
+            <th>آدرس</th>
+          </tr>
+        </thead>
+        <tbody class="tBody"></tbody>
+      </table>
+    </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
