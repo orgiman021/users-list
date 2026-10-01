@@ -8,93 +8,94 @@
   margin: 5px;
   padding: 5px;
   font-weight: 700px;
+  transition: all 3ms;
 }
 .inputs {
-  text-align: center;
+    text-align: center;
 }
 input {
-  border: 1.5px solid black;
-  width: 200px;
-  height: 25px;
-  border-radius: 5px;
+    border: 1.5px solid black;
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
 }
 .header {
-  background-color: blue;
-  border: 1px solid black;
-  border-radius: 5px;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .headline {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
 .showDiv {
-  text-align: center;
+    text-align: center;
 }
 .showBtn {
-  background-color: greenyellow;
-  width: 150px;
-  height: 70px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
+    background-color: greenyellow;
+    width: 150px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
 }
 .showBtn:active {
-  box-shadow: 0 0 5px black inset;
+    box-shadow: 0 0 5px black inset;
 }
 .showBtn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .addDiv {
-  text-align: center;
+    text-align: center;
 }
 .addBtn {
-  background-color: green;
-  width: 150px;
-  height: 70px;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  color: white;
+    background-color: green;
+    width: 150px;
+    height: 70px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    color: white;
 }
 .addBtn:active {
-  box-shadow: 0 0 5px black inset;
+    box-shadow: 0 0 5px black inset;
 }
 .addBtn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 table {
-  width: 90%;
+    width: 90%;
 }
 .usersTable {
-  width: 90%;
-  margin: 30px auto;
-  text-align: center;
-  opacity: 0;
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    opacity: 0;
 }
 
 th {
-  background-color: #4caf50;
-  color: white;
-  padding-inline: 50px;
-  border: 1px solid black;
-  font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    padding-inline: 50px;
+    border: 1px solid black;
+    font-size: 18px;
 }
 td {
-  padding-inline: 50px;
-  border: 1px solid black;
-  font-size: 18px;
+    padding-inline: 50px;
+    border: 1px solid black;
+    font-size: 18px;
 }
 .delete {
-  width: 90px;
-  height: 50px;
-  background-color: red;
-  border: 1px solid black;
-  border-radius: 5px;
+    width: 90px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 .delete:hover {
-  box-shadow: 0 0 5px black;
-  cursor: pointer;
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
 }
 .delete:active {
-  box-shadow: 0 0 5px black inset;
+    box-shadow: 0 0 5px black inset;
 }
