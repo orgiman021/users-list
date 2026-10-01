@@ -70,18 +70,32 @@ table{
     width: 90%;
     margin: 30px auto;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 th {
-  background-color: #4caf50;
-  color: white;
-  padding-inline: 50px;
-  border: 1px solid black;
-  font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    padding-inline: 50px;
+    border: 1px solid black;
+    font-size: 18px;
 }
 td {
-  padding-inline: 50px;
-  border: 1px solid black;
-  font-size: 18px;
+    padding-inline: 50px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+.delete{
+    width: 90px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.delete:hover{
+    box-shadow: 0 0 5px black;
+    cursor: pointer;
+}
+.delete:active{
+    box-shadow: 0 0 5px black inset;
 }

@@ -13,6 +13,7 @@ function showusers() {
         <td>${user.email}</td>
         <td>${user.phone}</td>
         <td>${user.address.city} , ${user.address.street}</td>
+        <td><button class="delete">حذف</button></td>
         </tr>`
       })
     });
