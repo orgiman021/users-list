@@ -63,8 +63,11 @@ input{
 .addBtn:hover{
     cursor: pointer;
 }
+table{
+    width: 90%;
+}
 .usersTable{
-    width: 70%;
+    width: 90%;
     margin: 30px auto;
     text-align: center;
     opacity: 0;
@@ -73,6 +76,11 @@ input{
 th {
   background-color: #4caf50;
   color: white;
+  padding-inline: 50px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+td {
   padding-inline: 50px;
   border: 1px solid black;
   font-size: 18px;
