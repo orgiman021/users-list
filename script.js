@@ -13,14 +13,18 @@ function showusers() {
             <td>${user.phone}</td>
             <td>${user.email}</td>
             <td>${user.address.city} , ${user.address.street}</td>
-            <td><button class="delete">حذف</button></td>
+          
+            <td><div class="btns"><button class="delete" onclick="deleteUser(id)">حذف</button>
+            <button class="edit">ویرایش</button>
+            </div>
+            </td>
             </tr>`;
       });
     });
 }
 // دکمه افزودن کاربر
 function addusers() {
-    // شرط برای قانونمند کردن افزودن کاربر
+  // شرط برای قانونمند کردن افزودن کاربر
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -45,8 +49,25 @@ function addusers() {
                 <td>${user.phone}</td>
                 <td>${user.email}</td>
                 <td>---</td>
-                <td><button class="delete">حذف</button></td>
+                  <td><div class="btns"><button class="delete">حذف</button>
+            <button class="edit">ویرایش</button>
+            </div>
+            </td>
                 </tr>`;
       });
   }
+}
+// فعال کردن دکمه حذف
+function deleteUser(id){
+fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+  method: 'DELETE',
+})
+.then(()=>{
+  alert("باموفقیت در ظاهر پاک شد {api فیک میباشد}")
+  showusers();
+})
+
+}
+function editUser(){
+
 }
