@@ -8,7 +8,11 @@
   margin: 5px;
   padding: 5px;
   font-weight: 700px;
-  transition: all 3ms;
+  transition: all 300ms;
+  
+}
+*:hover{
+  transition: all 300ms;
 }
 .inputs {
   text-align: center;

@@ -7,7 +7,7 @@ function showusers() {
       document.getElementById("usersTable").style.opacity = "1";
       tbody.innerHTML = "";
       data.forEach((user) => {
-        tbody.innerHTML += `<tr>
+        tbody.innerHTML += `<tr id="user-${user.id}">
             <td>${user.id}</td>
             <td>${user.name}</td>
             <td>${user.phone}</td>
@@ -15,7 +15,7 @@ function showusers() {
             <td>${user.address.city} , ${user.address.street}</td>
           
             <td><div class="btns"><button class="delete" onclick="deleteUser(id)">حذف</button>
-            <button class="edit">ویرایش</button>
+            <button class="edit" onclick="editUser('${user.id}','${user.name}','${user.email}')">ویرایش</button>
             </div>
             </td>
             </tr>`;
@@ -58,16 +58,32 @@ function addusers() {
   }
 }
 // فعال کردن دکمه حذف
-function deleteUser(id){
-fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-  method: 'DELETE',
-})
-.then(()=>{
-  alert("باموفقیت در ظاهر پاک شد {api فیک میباشد}")
-  showusers();
-})
-
+function deleteUser(id) {
+  fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+    method: "DELETE",
+  }).then(() => {
+    alert("باموفقیت در ظاهر پاک شد {api فیک میباشد}");
+    showusers();
+  });
 }
-function editUser(){
-
+function editUser(id, oldName, oldEmail) {
+  const newName = prompt("نام جدید را وارد کنید", oldName);
+  const newEmail = prompt("ایمیل جدید را وارد کنید", oldEmail);
+  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify({ name: newName, email: newEmail }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+  .then(res=>res.json())
+  .then(updated=>{
+    console.log(updated); 
+    alert("ویرایش انجام شد");
+    
+    const row = document.getElementById(`user-${id}`)
+    row.children[1].textContent = updated.name;
+    row.children[3].textContent = updated.email;
+  }
+);
 }
