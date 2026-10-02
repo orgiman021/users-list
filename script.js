@@ -66,6 +66,7 @@ function deleteUser(id) {
     showusers();
   });
 }
+//دکمه ویرایش اطلاعات
 function editUser(id, oldName, oldEmail) {
   const newName = prompt("نام جدید را وارد کنید", oldName);
   const newEmail = prompt("ایمیل جدید را وارد کنید", oldEmail);
